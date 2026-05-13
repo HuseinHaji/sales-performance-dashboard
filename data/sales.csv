@@ -1,0 +1,11 @@
+order_id,month,customer,product,revenue_eur,cost_eur
+S001,2026-01,Alfa GmbH,Analytics Setup,12000,6200
+S002,2026-01,Beta AG,Reporting Support,8400,4300
+S003,2026-01,Casa Retail,Dashboard Package,15100,7600
+S004,2026-02,Alfa GmbH,Reporting Support,9100,4500
+S005,2026-02,Delta GmbH,Analytics Setup,13200,6900
+S006,2026-02,Casa Retail,Dashboard Package,16300,8100
+S007,2026-03,Beta AG,Dashboard Package,14200,7000
+S008,2026-03,Delta GmbH,Reporting Support,9800,4700
+S009,2026-03,Alfa GmbH,Analytics Setup,12800,6500
+
