@@ -1,0 +1,9 @@
+product_id,product_name,product_category
+PRD001,Industrial Pump,Industrial
+PRD002,Analytics Suite,Software
+PRD003,Control Panel,Hardware
+PRD004,Service Contract,Services
+PRD005,Energy Module,Industrial
+PRD006,Cloud License,Software
+PRD007,Hardware Kit,Hardware
+PRD008,Maintenance Plan,Services

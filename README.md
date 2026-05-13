@@ -1,100 +1,120 @@
-# Sales Performance Dashboard
+# Sales & Performance Dashboard
 
-[![CI](https://github.com/HuseinHaji/sales-performance-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/HuseinHaji/sales-performance-dashboard/actions/workflows/ci.yml)
+## Business Context
 
-End-to-end sales analytics project that converts transaction data into executive KPIs, product and customer performance views, and commercial follow-up actions.
+This project simulates a commercial performance dashboard for a fictional B2B sales organisation. The dashboard captures revenue, profit, margin, target achievement, regional performance, product metrics, and customer insights.
 
-## Business Goal
+It supports sales managers and leaders in monthly performance review and strategic planning.
 
-Sales leaders need more than monthly revenue: they need margin visibility, customer concentration, product performance, and clear actions. This project prepares those layers from raw orders into dashboard-ready CSV tables.
+## Business Value
 
-## Architecture
+- Tracks revenue growth and margin performance.
+- Highlights top customers, products, regions and channels.
+- Compares actual sales against targets.
+- Supports operational decision making and sales enablement.
 
-```mermaid
-flowchart LR
-    A[Sales Orders CSV] --> B[Schema Validation]
-    B --> C[KPI Aggregation Engine]
-    C --> D[Monthly Trend KPIs]
-    C --> E[Product Performance]
-    C --> F[Customer Performance]
-    D --> G[Executive Summary]
-    E --> H[Pipeline Actions]
-    F --> H
-    D --> I[Revenue Forecast]
-    D --> J[Margin Bridge]
-```
+## Tech Stack
 
-## Repository Structure
+- Python 3.10+ (pandas, numpy)
+- PostgreSQL-style SQL
+- Power BI-ready CSV files
+- Jupyter Notebook for analysis
+
+## Dataset
+
+The data is synthetic and created to reflect a realistic commercial sales process. It includes customers, products, regions, channels, order lines, revenue, discounts, costs, profit, and targets.
+
+## Data Model
+
+- `dim_customer`: customer master data.
+- `dim_product`: product reference table.
+- `dim_region`: region master table.
+- `dim_channel`: sales channel table.
+- `dim_date`: monthly period table.
+- `fact_sales`: sales order line data.
+- `fact_targets`: monthly sales targets.
+- Dashboard outputs in `data/powerbi/`.
+
+## Key KPIs
+
+- Total revenue
+- Total profit
+- Gross margin
+- Revenue growth
+- Monthly revenue trend
+- Target achievement
+- Sales by product category
+- Sales by region
+- Sales by channel
+- Top customers and products
+- Average order value
+- Active customer count
+
+## Project Structure
 
 ```text
-.
+sales-performance-dashboard/
+├── README.md
+├── requirements.txt
+├── .gitignore
 ├── data/
-│   └── sales.csv
-├── output/
-│   ├── customer_performance.csv
-│   ├── executive_summary.csv
-│   ├── margin_bridge.csv
-│   ├── monthly_sales_kpis.csv
-│   ├── pipeline_actions.csv
-│   ├── product_performance.csv
-│   └── revenue_forecast.csv
+│   ├── raw/
+│   ├── processed/
+│   └── powerbi/
 ├── sql/
-│   └── sales_kpis.sql
-└── src/
-    └── build_kpis.py
+│   ├── 01_create_sales_schema.sql
+│   ├── 02_sales_kpi_queries.sql
+│   └── 03_dashboard_views.sql
+├── src/
+│   ├── generate_sales_data.py
+│   ├── transform_sales_data.py
+│   └── export_powerbi.py
+├── notebooks/
+│   └── sales_performance_analysis.ipynb
+└── screenshots/
+    └── .gitkeep
 ```
 
-## What The Pipeline Does
-
-- Validates the transaction schema before aggregation.
-- Calculates revenue, cost, gross margin, margin percentage, and average order value.
-- Produces monthly, product, and customer performance tables.
-- Builds an executive summary for top-line dashboard tiles.
-- Creates commercial action recommendations for low-margin products and high-value customers.
-- Adds a simple next-month revenue forecast from recent monthly trend.
-- Creates a margin bridge so month-over-month movement is easier to explain.
-- Includes SQL examples for warehouse-style KPI generation.
-
-## Outputs
-
-| File | Purpose |
-| --- | --- |
-| `output/monthly_sales_kpis.csv` | Monthly trend metrics for revenue, orders, margin, and average order value. |
-| `output/product_performance.csv` | Product-level revenue and margin performance. |
-| `output/customer_performance.csv` | Customer-level revenue and margin performance. |
-| `output/executive_summary.csv` | One-row dashboard summary for leadership. |
-| `output/pipeline_actions.csv` | Follow-up actions based on margin and account concentration. |
-| `output/revenue_forecast.csv` | Lightweight next-month revenue and margin forecast. |
-| `output/margin_bridge.csv` | Month-over-month revenue and margin movement. |
-
-## Run Locally
+## How to Run
 
 ```bash
-python3 src/build_kpis.py
+cd sales-performance-dashboard
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python src/generate_sales_data.py
+python src/transform_sales_data.py
+python src/export_powerbi.py
 ```
 
-No third-party packages are required; the project uses the Python standard library.
+For Windows:
 
-## Test
-
-```bash
-python3 -m pip install -r requirements-dev.txt
-python3 -m pytest
+```powershell
+.venv\Scriptsctivate
 ```
 
-## Simulated Business Impact
+## Dashboard Design
 
-- Turns transaction-level data into seven reusable commercial reporting outputs.
-- Separates executive summary, product performance, customer performance, and actions.
-- Adds a simple forecast and margin bridge so performance changes are easier to explain.
+Power BI pages:
 
-## How To Extend
+1. Executive Sales Overview
+2. Product Performance
+3. Region & Channel Analysis
+4. Customer Trends
+5. Target vs Actual
 
-- Add more historical months and replace the simple forecast with a time-series model.
-- Add sales owner, channel, and region dimensions.
-- Connect outputs to a BI dashboard or Streamlit app.
-- Add unit economics fields such as delivery cost, discount, and contribution margin.
+## Example Insights
 
-## Skills Demonstrated
+- Revenue growth is strongest in the West region and the Industrial product category.
+- Target achievement is highest for channel E-commerce and lowest for direct sales in one month.
+- Top customers contribute a significant share of profit, while mid-tier customers support margin stability.
 
-Sales KPI modeling, commercial analytics, margin analysis, lightweight forecasting, dashboard data modeling, CSV data engineering, and SQL-to-Python analytical parity.
+## Future Improvements
+
+- Add year-over-year comparisons.
+- Integrate customer retention and pipeline metrics.
+- Add scenario planning for target setting.
+
+## Disclaimer
+
+This project uses fully synthetic data created for portfolio demonstration purposes. It does not contain confidential, proprietary, or real company data.
