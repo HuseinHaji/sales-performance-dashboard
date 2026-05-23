@@ -18,6 +18,8 @@ flowchart LR
     D --> G[Executive Summary]
     E --> H[Pipeline Actions]
     F --> H
+    D --> I[Revenue Forecast]
+    D --> J[Margin Bridge]
 ```
 
 ## Repository Structure
@@ -29,9 +31,11 @@ flowchart LR
 ├── output/
 │   ├── customer_performance.csv
 │   ├── executive_summary.csv
+│   ├── margin_bridge.csv
 │   ├── monthly_sales_kpis.csv
 │   ├── pipeline_actions.csv
-│   └── product_performance.csv
+│   ├── product_performance.csv
+│   └── revenue_forecast.csv
 ├── sql/
 │   └── sales_kpis.sql
 └── src/
@@ -45,6 +49,8 @@ flowchart LR
 - Produces monthly, product, and customer performance tables.
 - Builds an executive summary for top-line dashboard tiles.
 - Creates commercial action recommendations for low-margin products and high-value customers.
+- Adds a simple next-month revenue forecast from recent monthly trend.
+- Creates a margin bridge so month-over-month movement is easier to explain.
 - Includes SQL examples for warehouse-style KPI generation.
 
 ## Outputs
@@ -56,6 +62,8 @@ flowchart LR
 | `output/customer_performance.csv` | Customer-level revenue and margin performance. |
 | `output/executive_summary.csv` | One-row dashboard summary for leadership. |
 | `output/pipeline_actions.csv` | Follow-up actions based on margin and account concentration. |
+| `output/revenue_forecast.csv` | Lightweight next-month revenue and margin forecast. |
+| `output/margin_bridge.csv` | Month-over-month revenue and margin movement. |
 
 ## Run Locally
 
@@ -67,4 +75,4 @@ No third-party packages are required; the project uses the Python standard libra
 
 ## Skills Demonstrated
 
-Sales KPI modeling, commercial analytics, margin analysis, dashboard data modeling, CSV data engineering, and SQL-to-Python analytical parity.
+Sales KPI modeling, commercial analytics, margin analysis, lightweight forecasting, dashboard data modeling, CSV data engineering, and SQL-to-Python analytical parity.

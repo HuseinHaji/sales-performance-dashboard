@@ -84,6 +84,50 @@ def build_pipeline_actions(product_rows, customer_rows):
     return actions
 
 
+def build_forecast(monthly):
+    latest = monthly[-1]
+    avg_revenue = sum(row["revenue_eur"] for row in monthly) / len(monthly)
+    avg_margin_pct = sum(row["gross_margin_pct"] for row in monthly) / len(monthly)
+    next_month = "2026-04"
+    return [
+        {
+            "forecast_month": next_month,
+            "method": "three_month_revenue_average",
+            "forecast_revenue_eur": round(avg_revenue, 2),
+            "forecast_gross_margin_eur": round(avg_revenue * avg_margin_pct, 2),
+            "forecast_gross_margin_pct": round(avg_margin_pct, 3),
+            "latest_month": latest["month"],
+            "latest_month_revenue_eur": latest["revenue_eur"],
+        }
+    ]
+
+
+def build_margin_bridge(monthly):
+    rows = []
+    previous = None
+    for row in monthly:
+        if previous is None:
+            rows.append(
+                {
+                    "month": row["month"],
+                    "revenue_change_eur": 0,
+                    "margin_change_eur": 0,
+                    "margin_pct_change": 0,
+                }
+            )
+        else:
+            rows.append(
+                {
+                    "month": row["month"],
+                    "revenue_change_eur": round(row["revenue_eur"] - previous["revenue_eur"], 2),
+                    "margin_change_eur": round(row["gross_margin_eur"] - previous["gross_margin_eur"], 2),
+                    "margin_pct_change": round(row["gross_margin_pct"] - previous["gross_margin_pct"], 3),
+                }
+            )
+        previous = row
+    return rows
+
+
 def write_csv(path, rows):
     if not rows:
         return
@@ -110,6 +154,8 @@ def main():
     write_csv(OUTPUT_DIR / "customer_performance.csv", customers)
     write_csv(OUTPUT_DIR / "executive_summary.csv", build_exec_summary(rows, monthly))
     write_csv(OUTPUT_DIR / "pipeline_actions.csv", build_pipeline_actions(products, customers))
+    write_csv(OUTPUT_DIR / "revenue_forecast.csv", build_forecast(monthly))
+    write_csv(OUTPUT_DIR / "margin_bridge.csv", build_margin_bridge(monthly))
 
     print(f"Wrote sales dashboard outputs to {OUTPUT_DIR}")
 
