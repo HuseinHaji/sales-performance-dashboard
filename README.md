@@ -1,5 +1,7 @@
 # Sales Performance Dashboard
 
+[![CI](https://github.com/HuseinHaji/sales-performance-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/HuseinHaji/sales-performance-dashboard/actions/workflows/ci.yml)
+
 End-to-end sales analytics project that converts transaction data into executive KPIs, product and customer performance views, and commercial follow-up actions.
 
 ## Business Goal
@@ -72,6 +74,26 @@ python3 src/build_kpis.py
 ```
 
 No third-party packages are required; the project uses the Python standard library.
+
+## Test
+
+```bash
+python3 -m pip install -r requirements-dev.txt
+python3 -m pytest
+```
+
+## Simulated Business Impact
+
+- Turns transaction-level data into seven reusable commercial reporting outputs.
+- Separates executive summary, product performance, customer performance, and actions.
+- Adds a simple forecast and margin bridge so performance changes are easier to explain.
+
+## How To Extend
+
+- Add more historical months and replace the simple forecast with a time-series model.
+- Add sales owner, channel, and region dimensions.
+- Connect outputs to a BI dashboard or Streamlit app.
+- Add unit economics fields such as delivery cost, discount, and contribution margin.
 
 ## Skills Demonstrated
 
