@@ -4,42 +4,115 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 INPUT = ROOT / "data" / "sales.csv"
-OUTPUT = ROOT / "output" / "monthly_sales_kpis.csv"
+OUTPUT_DIR = ROOT / "output"
+REQUIRED_FIELDS = ["order_id", "month", "customer", "product", "revenue_eur", "cost_eur"]
+
+
+def as_float(row, field):
+    try:
+        return float(row[field])
+    except (KeyError, TypeError, ValueError) as exc:
+        raise ValueError(f"{row.get('order_id', 'unknown')}: invalid {field}") from exc
+
+
+def aggregate(rows, key):
+    grouped = defaultdict(lambda: {"orders": 0, "revenue": 0.0, "cost": 0.0})
+    for row in rows:
+        bucket = grouped[row[key]]
+        bucket["orders"] += 1
+        bucket["revenue"] += as_float(row, "revenue_eur")
+        bucket["cost"] += as_float(row, "cost_eur")
+
+    output = []
+    for segment, values in sorted(grouped.items()):
+        margin = values["revenue"] - values["cost"]
+        output.append(
+            {
+                key: segment,
+                "orders": values["orders"],
+                "revenue_eur": round(values["revenue"], 2),
+                "gross_margin_eur": round(margin, 2),
+                "gross_margin_pct": round(margin / values["revenue"], 3),
+                "avg_order_value_eur": round(values["revenue"] / values["orders"], 2),
+            }
+        )
+    return output
+
+
+def build_exec_summary(rows, monthly):
+    revenue = sum(as_float(row, "revenue_eur") for row in rows)
+    cost = sum(as_float(row, "cost_eur") for row in rows)
+    margin = revenue - cost
+    best_month = max(monthly, key=lambda row: row["revenue_eur"])
+    return [
+        {
+            "orders": len(rows),
+            "revenue_eur": round(revenue, 2),
+            "gross_margin_eur": round(margin, 2),
+            "gross_margin_pct": round(margin / revenue, 3),
+            "avg_order_value_eur": round(revenue / len(rows), 2),
+            "best_month": best_month["month"],
+            "best_month_revenue_eur": best_month["revenue_eur"],
+        }
+    ]
+
+
+def build_pipeline_actions(product_rows, customer_rows):
+    actions = []
+    for row in product_rows:
+        if row["gross_margin_pct"] < 0.48:
+            actions.append(
+                {
+                    "focus_area": "product",
+                    "segment": row["product"],
+                    "metric": "gross_margin_pct",
+                    "value": row["gross_margin_pct"],
+                    "recommended_action": "Review pricing and delivery cost",
+                }
+            )
+    for row in customer_rows:
+        if row["revenue_eur"] >= 25000:
+            actions.append(
+                {
+                    "focus_area": "customer",
+                    "segment": row["customer"],
+                    "metric": "revenue_eur",
+                    "value": row["revenue_eur"],
+                    "recommended_action": "Protect account and propose expansion",
+                }
+            )
+    return actions
+
+
+def write_csv(path, rows):
+    if not rows:
+        return
+    with path.open("w", newline="") as file:
+        writer = DictWriter(file, fieldnames=rows[0].keys())
+        writer.writeheader()
+        writer.writerows(rows)
 
 
 def main():
     with INPUT.open(newline="") as file:
         rows = list(DictReader(file))
+    missing = [field for field in REQUIRED_FIELDS if rows and field not in rows[0]]
+    if missing:
+        raise ValueError(f"Missing required fields: {', '.join(missing)}")
 
-    monthly = defaultdict(lambda: {"orders": 0, "revenue": 0.0, "cost": 0.0})
-    for row in rows:
-        bucket = monthly[row["month"]]
-        bucket["orders"] += 1
-        bucket["revenue"] += float(row["revenue_eur"])
-        bucket["cost"] += float(row["cost_eur"])
+    monthly = aggregate(rows, "month")
+    products = sorted(aggregate(rows, "product"), key=lambda row: row["revenue_eur"], reverse=True)
+    customers = sorted(aggregate(rows, "customer"), key=lambda row: row["revenue_eur"], reverse=True)
 
-    output = []
-    for month, values in sorted(monthly.items()):
-        margin = values["revenue"] - values["cost"]
-        output.append(
-            {
-                "month": month,
-                "orders": values["orders"],
-                "revenue_eur": round(values["revenue"], 2),
-                "gross_margin_eur": round(margin, 2),
-                "gross_margin_pct": round(margin / values["revenue"], 3),
-            }
-        )
+    OUTPUT_DIR.mkdir(exist_ok=True)
+    write_csv(OUTPUT_DIR / "monthly_sales_kpis.csv", monthly)
+    write_csv(OUTPUT_DIR / "product_performance.csv", products)
+    write_csv(OUTPUT_DIR / "customer_performance.csv", customers)
+    write_csv(OUTPUT_DIR / "executive_summary.csv", build_exec_summary(rows, monthly))
+    write_csv(OUTPUT_DIR / "pipeline_actions.csv", build_pipeline_actions(products, customers))
 
-    OUTPUT.parent.mkdir(exist_ok=True)
-    with OUTPUT.open("w", newline="") as file:
-        writer = DictWriter(file, fieldnames=output[0].keys())
-        writer.writeheader()
-        writer.writerows(output)
-
-    print(f"Wrote {OUTPUT}")
+    print(f"Wrote sales dashboard outputs to {OUTPUT_DIR}")
 
 
 if __name__ == "__main__":
     main()
-

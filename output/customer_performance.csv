@@ -1,0 +1,5 @@
+customer,orders,revenue_eur,gross_margin_eur,gross_margin_pct,avg_order_value_eur
+Alfa GmbH,3,33900.0,16700.0,0.493,11300.0
+Casa Retail,2,31400.0,15700.0,0.5,15700.0
+Delta GmbH,2,23000.0,11400.0,0.496,11500.0
+Beta AG,2,22600.0,11300.0,0.5,11300.0
