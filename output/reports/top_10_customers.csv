@@ -1,0 +1,11 @@
+customer_id,customer_name,country,region,industry,customer_segment,total_revenue,gross_margin,order_count,last_order_date,gross_margin_pct,avg_order_value,customer_status,revenue_rank,margin_rank,customer_value_band
+CUST0040,Vertex 040 GmbH,Ireland,Western Europe,Professional Services,Enterprise,2030124.09,1069776.1,51,2025-12-02,0.53,39806.35,Active,1,1,Strategic Accounts
+CUST0084,Prime 084 GmbH,Denmark,Northern Europe,Technology,Enterprise,1666498.3,889946.99,42,2025-12-20,0.53,39678.53,Active,2,2,Strategic Accounts
+CUST0067,Prime 067 GmbH,Italy,Southern Europe,Logistics,Enterprise,1652214.39,880335.95,38,2025-12-02,0.53,43479.33,Active,3,3,Strategic Accounts
+CUST0031,Nexa 031 GmbH,Sweden,Northern Europe,Technology,Enterprise,1577092.03,844911.21,40,2025-12-17,0.54,39427.3,Active,4,5,Strategic Accounts
+CUST0052,Apex 052 GmbH,Spain,Southern Europe,Logistics,Enterprise,1576730.68,845402.71,37,2025-12-23,0.54,42614.34,Active,5,4,Strategic Accounts
+CUST0085,Nexa 085 GmbH,Germany,DACH,Retail,Enterprise,1538422.33,793047.34,30,2025-12-13,0.52,51280.74,Active,6,7,Strategic Accounts
+CUST0051,Urban 051 GmbH,Ireland,Western Europe,Technology,Enterprise,1488999.19,801544.38,42,2025-12-26,0.54,35452.36,Active,7,6,Strategic Accounts
+CUST0019,Helio 019 GmbH,Sweden,Northern Europe,Healthcare,Enterprise,1476552.2,776421.05,39,2025-12-05,0.53,37860.31,Active,8,8,Strategic Accounts
+CUST0081,Urban 081 GmbH,Austria,DACH,Healthcare,Enterprise,1475774.87,772728.52,39,2025-12-22,0.52,37840.38,Active,9,9,Strategic Accounts
+CUST0027,Helio 027 GmbH,Belgium,Western Europe,Manufacturing,Enterprise,1396427.23,747657.01,34,2025-12-20,0.54,41071.39,Active,10,10,Strategic Accounts

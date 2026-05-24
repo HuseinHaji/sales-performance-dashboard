@@ -11,6 +11,7 @@ RUN pip install --upgrade pip && pip install -r requirements.txt || true
 COPY src/ ./src/
 COPY data/ ./data/
 COPY sql/ ./sql/
+COPY output/ ./output/
 
 EXPOSE 8501
-CMD ["streamlit", "run", "src/app.py", "--server.port", "8501", "--server.headless", "true"]
+CMD ["sh", "-c", "python src/generate_synthetic_data.py && python src/validate_data.py && python src/transform_data.py && python src/calculate_kpis.py && python src/sales_analysis.py && python src/export_powerbi.py && streamlit run src/app.py --server.port 8501 --server.headless true"]

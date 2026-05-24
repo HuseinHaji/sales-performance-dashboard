@@ -1,0 +1,91 @@
+customer_id,customer_name,country,region,industry,customer_segment,total_revenue,gross_margin,order_count,last_order_date,gross_margin_pct,avg_order_value,customer_status,revenue_rank,margin_rank,customer_value_band
+CUST0040,Vertex 040 GmbH,Ireland,Western Europe,Professional Services,Enterprise,2030124.09,1069776.1,51,2025-12-02,0.53,39806.35,Active,1,1,Strategic Accounts
+CUST0084,Prime 084 GmbH,Denmark,Northern Europe,Technology,Enterprise,1666498.3,889946.99,42,2025-12-20,0.53,39678.53,Active,2,2,Strategic Accounts
+CUST0067,Prime 067 GmbH,Italy,Southern Europe,Logistics,Enterprise,1652214.39,880335.95,38,2025-12-02,0.53,43479.33,Active,3,3,Strategic Accounts
+CUST0031,Nexa 031 GmbH,Sweden,Northern Europe,Technology,Enterprise,1577092.03,844911.21,40,2025-12-17,0.54,39427.3,Active,4,5,Strategic Accounts
+CUST0052,Apex 052 GmbH,Spain,Southern Europe,Logistics,Enterprise,1576730.68,845402.71,37,2025-12-23,0.54,42614.34,Active,5,4,Strategic Accounts
+CUST0085,Nexa 085 GmbH,Germany,DACH,Retail,Enterprise,1538422.33,793047.34,30,2025-12-13,0.52,51280.74,Active,6,7,Strategic Accounts
+CUST0051,Urban 051 GmbH,Ireland,Western Europe,Technology,Enterprise,1488999.19,801544.38,42,2025-12-26,0.54,35452.36,Active,7,6,Strategic Accounts
+CUST0019,Helio 019 GmbH,Sweden,Northern Europe,Healthcare,Enterprise,1476552.2,776421.05,39,2025-12-05,0.53,37860.31,Active,8,8,Strategic Accounts
+CUST0081,Urban 081 GmbH,Austria,DACH,Healthcare,Enterprise,1475774.87,772728.52,39,2025-12-22,0.52,37840.38,Active,9,9,Strategic Accounts
+CUST0027,Helio 027 GmbH,Belgium,Western Europe,Manufacturing,Enterprise,1396427.23,747657.01,34,2025-12-20,0.54,41071.39,Active,10,10,Strategic Accounts
+CUST0001,Urban 001 GmbH,Sweden,Northern Europe,Healthcare,Enterprise,1389752.95,742478.38,37,2025-12-25,0.53,37560.89,Active,11,11,Growth Accounts
+CUST0078,Vertex 078 GmbH,Switzerland,DACH,Professional Services,Enterprise,1352171.23,716321.9,37,2025-12-21,0.53,36545.17,Active,12,12,Growth Accounts
+CUST0011,Apex 011 GmbH,Netherlands,Northern Europe,Professional Services,Enterprise,1321514.51,679107.86,34,2025-12-03,0.51,38868.07,Active,13,16,Growth Accounts
+CUST0066,Prime 066 GmbH,Portugal,Southern Europe,Retail,Enterprise,1293024.42,680776.65,33,2025-11-18,0.53,39182.56,Active,14,14,Growth Accounts
+CUST0026,Prime 026 GmbH,Netherlands,Northern Europe,Healthcare,Enterprise,1285472.18,679579.83,36,2025-11-25,0.53,35707.56,Active,15,15,Growth Accounts
+CUST0018,Prime 018 GmbH,Sweden,Northern Europe,Manufacturing,Enterprise,1282598.28,708322.74,37,2025-12-21,0.55,34664.82,Active,16,13,Growth Accounts
+CUST0089,Vertex 089 GmbH,Germany,DACH,Retail,Enterprise,1276513.32,660705.53,34,2025-11-19,0.52,37544.51,Active,17,18,Growth Accounts
+CUST0032,Helio 032 GmbH,Switzerland,DACH,Logistics,Enterprise,1274709.17,661979.96,31,2025-08-25,0.52,41119.65,At Risk,18,17,Growth Accounts
+CUST0025,Helio 025 GmbH,Germany,DACH,Retail,Enterprise,1252135.23,643097.08,31,2025-12-25,0.51,40391.46,Active,19,20,Growth Accounts
+CUST0029,Helio 029 GmbH,Netherlands,Northern Europe,Manufacturing,Enterprise,1217241.26,649877.57,31,2025-12-13,0.53,39265.85,Active,20,19,Growth Accounts
+CUST0082,Prime 082 GmbH,Ireland,Western Europe,Professional Services,Enterprise,1142469.49,610326.48,26,2025-12-02,0.53,43941.13,Active,21,21,Growth Accounts
+CUST0072,Vertex 072 GmbH,Sweden,Northern Europe,Retail,Enterprise,1028244.52,554652.43,29,2025-11-20,0.54,35456.71,Active,22,23,Growth Accounts
+CUST0007,Nexa 007 GmbH,Austria,DACH,Professional Services,Mid-Market,1023986.2,566275.58,47,2025-12-16,0.55,21786.94,Active,23,22,Growth Accounts
+CUST0002,Prime 002 GmbH,Sweden,Northern Europe,Healthcare,Enterprise,977975.27,528533.32,25,2025-11-25,0.54,39119.01,Active,24,24,Growth Accounts
+CUST0010,Prime 010 GmbH,Portugal,Southern Europe,Professional Services,Mid-Market,963551.77,525302.74,51,2025-12-27,0.55,18893.17,Active,25,25,Growth Accounts
+CUST0017,Vertex 017 GmbH,Portugal,Southern Europe,Manufacturing,Mid-Market,957460.59,508177.26,45,2025-11-10,0.53,21276.9,Active,26,26,Growth Accounts
+CUST0041,Nexa 041 GmbH,Belgium,Western Europe,Retail,SMB,934811.81,488161.14,39,2025-12-12,0.52,23969.53,Active,27,27,Growth Accounts
+CUST0012,Prime 012 GmbH,Germany,DACH,Technology,Mid-Market,858189.45,457277.04,39,2025-12-17,0.53,22004.86,Active,28,28,Growth Accounts
+CUST0088,Apex 088 GmbH,Germany,DACH,Retail,SMB,828885.39,454634.11,33,2025-12-20,0.55,25117.74,Active,29,30,Growth Accounts
+CUST0003,Helio 003 GmbH,Switzerland,DACH,Manufacturing,Mid-Market,825759.73,455700.43,42,2025-12-13,0.55,19660.95,Active,30,29,Growth Accounts
+CUST0065,Helio 065 GmbH,Germany,DACH,Professional Services,SMB,812676.85,447854.97,37,2025-12-09,0.55,21964.24,Active,31,31,Growth Accounts
+CUST0055,Prime 055 GmbH,Italy,Southern Europe,Manufacturing,SMB,810903.52,439151.58,32,2025-11-17,0.54,25340.74,Active,32,32,Growth Accounts
+CUST0042,Nexa 042 GmbH,Switzerland,DACH,Manufacturing,Mid-Market,792362.99,433397.7,37,2025-11-15,0.55,21415.22,Active,33,34,Growth Accounts
+CUST0087,Urban 087 GmbH,Belgium,Western Europe,Technology,Mid-Market,791751.25,429840.22,50,2025-12-16,0.54,15835.02,Active,34,35,Growth Accounts
+CUST0005,Nexa 005 GmbH,Germany,DACH,Professional Services,SMB,779447.77,434315.94,41,2025-12-17,0.56,19010.92,Active,35,33,Growth Accounts
+CUST0076,Nexa 076 GmbH,Switzerland,DACH,Professional Services,SMB,777081.59,424205.12,35,2025-09-21,0.55,22202.33,Active,36,37,Growth Accounts
+CUST0056,Prime 056 GmbH,Austria,DACH,Professional Services,Mid-Market,776808.42,416740.71,37,2025-12-02,0.54,20994.82,Active,37,38,Growth Accounts
+CUST0016,Vertex 016 GmbH,Austria,DACH,Technology,Mid-Market,765064.39,429661.57,39,2025-12-24,0.56,19617.04,Active,38,36,Growth Accounts
+CUST0043,Urban 043 GmbH,Switzerland,DACH,Technology,SMB,760820.97,401830.12,43,2025-11-27,0.53,17693.51,Active,39,44,Growth Accounts
+CUST0068,Prime 068 GmbH,Denmark,Northern Europe,Manufacturing,SMB,757381.21,408168.66,43,2025-11-23,0.54,17613.52,Active,40,41,Growth Accounts
+CUST0069,Vertex 069 GmbH,Denmark,Northern Europe,Retail,SMB,753319.4,410171.64,36,2025-12-10,0.54,20925.54,Active,41,39,Growth Accounts
+CUST0030,Vertex 030 GmbH,Switzerland,DACH,Healthcare,Mid-Market,745389.78,408283.85,38,2025-12-11,0.55,19615.52,Active,42,40,Growth Accounts
+CUST0035,Nexa 035 GmbH,Portugal,Southern Europe,Professional Services,Mid-Market,740528.4,385152.99,41,2025-12-20,0.52,18061.67,Active,43,47,Growth Accounts
+CUST0048,Nexa 048 GmbH,Portugal,Southern Europe,Healthcare,SMB,731957.97,392365.63,27,2025-11-01,0.54,27109.55,Active,44,45,Growth Accounts
+CUST0074,Apex 074 GmbH,Switzerland,DACH,Healthcare,Mid-Market,726425.29,388963.08,42,2025-11-12,0.54,17295.84,Active,45,46,Growth Accounts
+CUST0015,Apex 015 GmbH,Belgium,Western Europe,Healthcare,Mid-Market,726196.38,405144.81,32,2025-12-08,0.56,22693.64,Active,46,43,Stable Accounts
+CUST0057,Prime 057 GmbH,Switzerland,DACH,Manufacturing,SMB,724561.1,406416.91,41,2025-12-11,0.56,17672.22,Active,47,42,Stable Accounts
+CUST0033,Prime 033 GmbH,Ireland,Western Europe,Retail,Mid-Market,720642.38,384148.27,34,2025-12-22,0.53,21195.36,Active,48,48,Stable Accounts
+CUST0046,Nexa 046 GmbH,Switzerland,DACH,Logistics,Mid-Market,720552.75,380358.25,37,2025-12-24,0.53,19474.4,Active,49,50,Stable Accounts
+CUST0062,Urban 062 GmbH,Italy,Southern Europe,Healthcare,Mid-Market,703321.22,379544.86,33,2025-12-13,0.54,21312.76,Active,50,51,Stable Accounts
+CUST0090,Helio 090 GmbH,Austria,DACH,Manufacturing,Mid-Market,697691.45,362781.73,33,2025-12-08,0.52,21142.17,Active,51,63,Stable Accounts
+CUST0079,Helio 079 GmbH,Austria,DACH,Professional Services,Mid-Market,697418.16,379399.2,37,2025-12-24,0.54,18849.14,Active,52,52,Stable Accounts
+CUST0050,Nexa 050 GmbH,Sweden,Northern Europe,Technology,SMB,694364.66,378469.62,32,2025-11-22,0.55,21698.9,Active,53,53,Stable Accounts
+CUST0036,Helio 036 GmbH,Belgium,Western Europe,Professional Services,SMB,690386.98,382736.54,33,2025-12-09,0.55,20920.82,Active,54,49,Stable Accounts
+CUST0064,Apex 064 GmbH,Ireland,Western Europe,Technology,Mid-Market,681183.5,371002.69,35,2025-12-17,0.54,19462.39,Active,55,55,Stable Accounts
+CUST0039,Urban 039 GmbH,Austria,DACH,Manufacturing,Mid-Market,680826.02,369686.2,34,2025-12-19,0.54,20024.29,Active,56,58,Stable Accounts
+CUST0023,Urban 023 GmbH,Austria,DACH,Retail,Mid-Market,671943.75,375993.94,32,2025-12-10,0.56,20998.24,Active,57,54,Stable Accounts
+CUST0053,Prime 053 GmbH,Denmark,Northern Europe,Technology,SMB,660461.46,362579.24,31,2025-11-02,0.55,21305.21,Active,58,64,Stable Accounts
+CUST0044,Vertex 044 GmbH,Germany,DACH,Manufacturing,Mid-Market,659029.65,370565.84,31,2025-12-27,0.56,21259.02,Active,59,56,Stable Accounts
+CUST0004,Vertex 004 GmbH,Italy,Southern Europe,Technology,Mid-Market,653991.51,370497.01,28,2025-11-21,0.57,23356.84,Active,60,57,Stable Accounts
+CUST0038,Urban 038 GmbH,Belgium,Western Europe,Professional Services,Mid-Market,650214.01,367127.38,32,2025-12-11,0.56,20319.19,Active,61,60,Stable Accounts
+CUST0022,Apex 022 GmbH,Germany,DACH,Healthcare,Mid-Market,647382.25,368972.14,37,2025-12-17,0.57,17496.82,Active,62,59,Stable Accounts
+CUST0077,Helio 077 GmbH,Denmark,Northern Europe,Retail,Mid-Market,642344.22,367063.77,33,2025-12-26,0.57,19464.98,Active,63,61,Stable Accounts
+CUST0060,Nexa 060 GmbH,Germany,DACH,Healthcare,SMB,641826.46,360296.61,38,2025-12-03,0.56,16890.17,Active,64,65,Stable Accounts
+CUST0086,Urban 086 GmbH,Austria,DACH,Healthcare,SMB,634796.99,365258.28,39,2025-12-21,0.58,16276.85,Active,65,62,Stable Accounts
+CUST0061,Urban 061 GmbH,Switzerland,DACH,Professional Services,Mid-Market,629960.55,345928.03,28,2025-12-04,0.55,22498.59,Active,66,67,Stable Accounts
+CUST0058,Apex 058 GmbH,Germany,DACH,Professional Services,Mid-Market,622129.01,349098.05,32,2025-12-10,0.56,19441.53,Active,67,66,Stable Accounts
+CUST0063,Vertex 063 GmbH,Italy,Southern Europe,Logistics,Mid-Market,621739.18,336736.7,30,2025-11-03,0.54,20724.64,Active,68,69,Stable Accounts
+CUST0049,Urban 049 GmbH,Ireland,Western Europe,Healthcare,SMB,621035.28,332328.06,31,2025-12-18,0.54,20033.4,Active,69,70,Stable Accounts
+CUST0028,Vertex 028 GmbH,Switzerland,DACH,Manufacturing,SMB,620319.21,330724.6,35,2025-12-13,0.53,17723.41,Active,70,71,Stable Accounts
+CUST0045,Apex 045 GmbH,Switzerland,DACH,Technology,SMB,610972.34,339941.57,37,2025-12-03,0.56,16512.77,Active,71,68,Stable Accounts
+CUST0073,Urban 073 GmbH,Ireland,Western Europe,Technology,SMB,590867.14,320803.97,38,2025-12-25,0.54,15549.14,Active,72,72,Stable Accounts
+CUST0013,Urban 013 GmbH,Netherlands,Northern Europe,Healthcare,SMB,589119.1,308250.71,25,2025-12-12,0.52,23564.76,Active,73,74,Stable Accounts
+CUST0083,Prime 083 GmbH,Spain,Southern Europe,Professional Services,Mid-Market,574057.55,317454.92,30,2025-12-21,0.55,19135.25,Active,74,73,Stable Accounts
+CUST0008,Nexa 008 GmbH,Belgium,Western Europe,Logistics,Mid-Market,569699.78,307796.95,30,2025-11-15,0.54,18989.99,Active,75,75,Stable Accounts
+CUST0080,Helio 080 GmbH,Netherlands,Northern Europe,Healthcare,SMB,550802.8,292220.18,30,2025-11-06,0.53,18360.09,Active,76,77,Stable Accounts
+CUST0071,Nexa 071 GmbH,Ireland,Western Europe,Healthcare,SMB,546632.43,293284.11,32,2025-12-13,0.54,17082.26,Active,77,76,Stable Accounts
+CUST0075,Vertex 075 GmbH,Italy,Southern Europe,Retail,Mid-Market,507534.31,276822.6,29,2025-11-16,0.55,17501.18,Active,78,81,Stable Accounts
+CUST0024,Prime 024 GmbH,Belgium,Western Europe,Retail,SMB,506619.86,280120.38,31,2025-11-26,0.55,16342.58,Active,79,78,Stable Accounts
+CUST0070,Helio 070 GmbH,Netherlands,Northern Europe,Manufacturing,SMB,501580.64,278900.1,31,2025-12-27,0.56,16180.02,Active,80,80,Stable Accounts
+CUST0037,Urban 037 GmbH,Sweden,Northern Europe,Healthcare,SMB,500201.7,279500.02,30,2025-12-16,0.56,16673.39,Active,81,79,Stable Accounts
+CUST0021,Vertex 021 GmbH,Italy,Southern Europe,Professional Services,Mid-Market,477852.9,262141.87,32,2025-12-12,0.55,14932.9,Active,82,82,Stable Accounts
+CUST0054,Vertex 054 GmbH,Sweden,Northern Europe,Retail,Mid-Market,466943.16,246821.51,26,2025-12-23,0.53,17959.35,Active,83,88,Stable Accounts
+CUST0014,Nexa 014 GmbH,France,Western Europe,Professional Services,SMB,462405.21,251185.23,25,2025-12-22,0.54,18496.21,Active,84,86,Stable Accounts
+CUST0009,Helio 009 GmbH,Germany,DACH,Healthcare,Mid-Market,461158.92,257507.0,26,2025-12-21,0.56,17736.88,Active,85,84,Stable Accounts
+CUST0047,Vertex 047 GmbH,Netherlands,Northern Europe,Logistics,Mid-Market,460634.61,248916.31,26,2025-12-14,0.54,17716.72,Active,86,87,Stable Accounts
+CUST0034,Vertex 034 GmbH,Switzerland,DACH,Technology,Mid-Market,457608.38,258047.61,36,2025-10-09,0.56,12711.34,Active,87,83,Stable Accounts
+CUST0059,Apex 059 GmbH,Ireland,Western Europe,Healthcare,Mid-Market,443401.09,251976.45,30,2025-12-11,0.57,14780.04,Active,88,85,Stable Accounts
+CUST0006,Vertex 006 GmbH,Denmark,Northern Europe,Professional Services,SMB,442406.53,243208.69,32,2025-12-01,0.55,13825.2,Active,89,89,Stable Accounts
+CUST0020,Prime 020 GmbH,Italy,Southern Europe,Healthcare,Mid-Market,405997.07,222877.25,30,2025-12-06,0.55,13533.24,Active,90,90,Stable Accounts

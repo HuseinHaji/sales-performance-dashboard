@@ -1,0 +1,11 @@
+product_id,product_name,product_category,product_family,total_revenue,gross_margin,quantity_sold,order_count,avg_discount_rate,gross_margin_pct,revenue_share,product_performance_band
+PRD002,Sales Planning Suite,Software,Planning,12014583.51,6164197.07,1474,249,0.06,0.51,0.16,Revenue Drivers
+PRD009,Energy Optimization Module,Industrial,Efficiency,10303525.99,5658188.83,1624,272,0.06,0.55,0.13,Revenue Drivers
+PRD001,Analytics Platform Pro,Software,Performance Management,11982094.33,5562678.43,1365,242,0.06,0.46,0.16,Revenue Drivers
+PRD010,Production Quality Module,Industrial,Quality,9408004.69,5312733.98,1611,277,0.06,0.56,0.12,Revenue Drivers
+PRD005,Edge Control Unit,Hardware,Automation,7156813.68,3836048.48,1550,286,0.06,0.54,0.09,Margin Leaders
+PRD011,Customer Portal License,Software,Portal,4937285.48,3023135.34,1440,247,0.06,0.61,0.06,Margin Leaders
+PRD008,Commercial Intelligence Workshop,Services,Advisory,5408973.07,2855800.93,1392,252,0.06,0.53,0.07,Margin Leaders
+PRD006,Field Service Package,Services,Implementation,3996336.84,2259029.96,1420,247,0.06,0.57,0.05,Margin Leaders
+PRD003,Integration Connector Pack,Software,Data Integration,3050584.6,1816088.36,1350,258,0.06,0.6,0.04,Margin Leaders
+PRD007,Managed Support Contract,Services,Support,3128982.92,1801612.13,1527,272,0.06,0.58,0.04,Margin Leaders

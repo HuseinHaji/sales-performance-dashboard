@@ -1,0 +1,5 @@
+analysis_area,metric,value,business_interpretation
+Executive Overview,latest_month_revenue,3053168.26,Most recent closed-order revenue in the synthetic sales dataset.
+Margin,average_gross_margin_pct,0.5362,Portfolio implementation margin indicator for commercial review.
+Customer Concentration,top_10_customer_revenue_share,0.2069,Share of revenue contributed by the top ten synthetic customers.
+Target Achievement,average_target_achievement_rate,0.8967,Average revenue attainment against simulated monthly targets.

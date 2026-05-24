@@ -1,0 +1,91 @@
+customer_id,customer_name,country,region,industry,company_size,customer_segment,onboarding_date,active_flag
+CUST0001,Urban 001 GmbH,Sweden,Northern Europe,Healthcare,5000+,Enterprise,2022-04-20,Y
+CUST0002,Prime 002 GmbH,Sweden,Northern Europe,Healthcare,1001-5000,Enterprise,2022-10-16,N
+CUST0003,Helio 003 GmbH,Switzerland,DACH,Manufacturing,201-500,Mid-Market,2020-03-20,Y
+CUST0004,Vertex 004 GmbH,Italy,Southern Europe,Technology,201-500,Mid-Market,2024-11-28,Y
+CUST0005,Nexa 005 GmbH,Germany,DACH,Professional Services,501-1000,SMB,2022-04-30,Y
+CUST0006,Vertex 006 GmbH,Denmark,Northern Europe,Professional Services,501-1000,SMB,2024-05-21,Y
+CUST0007,Nexa 007 GmbH,Austria,DACH,Professional Services,51-200,Mid-Market,2021-12-03,Y
+CUST0008,Nexa 008 GmbH,Belgium,Western Europe,Logistics,5000+,Mid-Market,2021-03-24,Y
+CUST0009,Helio 009 GmbH,Germany,DACH,Healthcare,501-1000,Mid-Market,2023-09-03,Y
+CUST0010,Prime 010 GmbH,Portugal,Southern Europe,Professional Services,5000+,Mid-Market,2022-09-14,Y
+CUST0011,Apex 011 GmbH,Netherlands,Northern Europe,Professional Services,51-200,Enterprise,2020-06-19,Y
+CUST0012,Prime 012 GmbH,Germany,DACH,Technology,501-1000,Mid-Market,2020-01-14,Y
+CUST0013,Urban 013 GmbH,Netherlands,Northern Europe,Healthcare,201-500,SMB,2023-02-15,Y
+CUST0014,Nexa 014 GmbH,France,Western Europe,Professional Services,201-500,SMB,2024-01-24,Y
+CUST0015,Apex 015 GmbH,Belgium,Western Europe,Healthcare,51-200,Mid-Market,2020-08-22,Y
+CUST0016,Vertex 016 GmbH,Austria,DACH,Technology,201-500,Mid-Market,2020-05-05,Y
+CUST0017,Vertex 017 GmbH,Portugal,Southern Europe,Manufacturing,1001-5000,Mid-Market,2021-06-20,Y
+CUST0018,Prime 018 GmbH,Sweden,Northern Europe,Manufacturing,51-200,Enterprise,2021-08-01,Y
+CUST0019,Helio 019 GmbH,Sweden,Northern Europe,Healthcare,201-500,Enterprise,2024-08-03,N
+CUST0020,Prime 020 GmbH,Italy,Southern Europe,Healthcare,1001-5000,Mid-Market,2024-04-26,Y
+CUST0021,Vertex 021 GmbH,Italy,Southern Europe,Professional Services,1001-5000,Mid-Market,2024-11-05,Y
+CUST0022,Apex 022 GmbH,Germany,DACH,Healthcare,501-1000,Mid-Market,2021-12-13,Y
+CUST0023,Urban 023 GmbH,Austria,DACH,Retail,1001-5000,Mid-Market,2022-06-20,Y
+CUST0024,Prime 024 GmbH,Belgium,Western Europe,Retail,501-1000,SMB,2020-08-01,Y
+CUST0025,Helio 025 GmbH,Germany,DACH,Retail,51-200,Enterprise,2023-05-18,N
+CUST0026,Prime 026 GmbH,Netherlands,Northern Europe,Healthcare,201-500,Enterprise,2022-04-18,Y
+CUST0027,Helio 027 GmbH,Belgium,Western Europe,Manufacturing,501-1000,Enterprise,2021-08-24,Y
+CUST0028,Vertex 028 GmbH,Switzerland,DACH,Manufacturing,201-500,SMB,2021-01-01,Y
+CUST0029,Helio 029 GmbH,Netherlands,Northern Europe,Manufacturing,501-1000,Enterprise,2021-09-29,Y
+CUST0030,Vertex 030 GmbH,Switzerland,DACH,Healthcare,1001-5000,Mid-Market,2023-06-18,Y
+CUST0031,Nexa 031 GmbH,Sweden,Northern Europe,Technology,501-1000,Enterprise,2024-07-09,Y
+CUST0032,Helio 032 GmbH,Switzerland,DACH,Logistics,501-1000,Enterprise,2023-02-26,Y
+CUST0033,Prime 033 GmbH,Ireland,Western Europe,Retail,501-1000,Mid-Market,2021-03-09,Y
+CUST0034,Vertex 034 GmbH,Switzerland,DACH,Technology,501-1000,Mid-Market,2021-07-08,Y
+CUST0035,Nexa 035 GmbH,Portugal,Southern Europe,Professional Services,5000+,Mid-Market,2022-10-31,Y
+CUST0036,Helio 036 GmbH,Belgium,Western Europe,Professional Services,1001-5000,SMB,2022-10-26,Y
+CUST0037,Urban 037 GmbH,Sweden,Northern Europe,Healthcare,201-500,SMB,2020-04-15,Y
+CUST0038,Urban 038 GmbH,Belgium,Western Europe,Professional Services,201-500,Mid-Market,2021-02-17,Y
+CUST0039,Urban 039 GmbH,Austria,DACH,Manufacturing,201-500,Mid-Market,2023-01-14,Y
+CUST0040,Vertex 040 GmbH,Ireland,Western Europe,Professional Services,501-1000,Enterprise,2022-05-11,Y
+CUST0041,Nexa 041 GmbH,Belgium,Western Europe,Retail,5000+,SMB,2023-10-24,Y
+CUST0042,Nexa 042 GmbH,Switzerland,DACH,Manufacturing,501-1000,Mid-Market,2021-09-27,Y
+CUST0043,Urban 043 GmbH,Switzerland,DACH,Technology,51-200,SMB,2020-11-25,Y
+CUST0044,Vertex 044 GmbH,Germany,DACH,Manufacturing,501-1000,Mid-Market,2021-05-17,Y
+CUST0045,Apex 045 GmbH,Switzerland,DACH,Technology,5000+,SMB,2024-03-06,Y
+CUST0046,Nexa 046 GmbH,Switzerland,DACH,Logistics,501-1000,Mid-Market,2020-11-05,Y
+CUST0047,Vertex 047 GmbH,Netherlands,Northern Europe,Logistics,5000+,Mid-Market,2024-05-18,Y
+CUST0048,Nexa 048 GmbH,Portugal,Southern Europe,Healthcare,501-1000,SMB,2021-09-27,Y
+CUST0049,Urban 049 GmbH,Ireland,Western Europe,Healthcare,501-1000,SMB,2024-06-05,Y
+CUST0050,Nexa 050 GmbH,Sweden,Northern Europe,Technology,5000+,SMB,2023-06-21,Y
+CUST0051,Urban 051 GmbH,Ireland,Western Europe,Technology,51-200,Enterprise,2024-09-12,Y
+CUST0052,Apex 052 GmbH,Spain,Southern Europe,Logistics,1001-5000,Enterprise,2022-06-16,Y
+CUST0053,Prime 053 GmbH,Denmark,Northern Europe,Technology,5000+,SMB,2023-07-30,Y
+CUST0054,Vertex 054 GmbH,Sweden,Northern Europe,Retail,501-1000,Mid-Market,2022-01-04,Y
+CUST0055,Prime 055 GmbH,Italy,Southern Europe,Manufacturing,51-200,SMB,2024-05-07,Y
+CUST0056,Prime 056 GmbH,Austria,DACH,Professional Services,501-1000,Mid-Market,2021-01-04,Y
+CUST0057,Prime 057 GmbH,Switzerland,DACH,Manufacturing,501-1000,SMB,2021-09-13,Y
+CUST0058,Apex 058 GmbH,Germany,DACH,Professional Services,1001-5000,Mid-Market,2022-06-08,Y
+CUST0059,Apex 059 GmbH,Ireland,Western Europe,Healthcare,5000+,Mid-Market,2023-11-15,Y
+CUST0060,Nexa 060 GmbH,Germany,DACH,Healthcare,501-1000,SMB,2020-04-20,N
+CUST0061,Urban 061 GmbH,Switzerland,DACH,Professional Services,51-200,Mid-Market,2021-04-26,Y
+CUST0062,Urban 062 GmbH,Italy,Southern Europe,Healthcare,201-500,Mid-Market,2024-11-26,N
+CUST0063,Vertex 063 GmbH,Italy,Southern Europe,Logistics,501-1000,Mid-Market,2024-07-22,Y
+CUST0064,Apex 064 GmbH,Ireland,Western Europe,Technology,201-500,Mid-Market,2022-05-09,Y
+CUST0065,Helio 065 GmbH,Germany,DACH,Professional Services,201-500,SMB,2024-10-19,Y
+CUST0066,Prime 066 GmbH,Portugal,Southern Europe,Retail,501-1000,Enterprise,2020-08-09,Y
+CUST0067,Prime 067 GmbH,Italy,Southern Europe,Logistics,51-200,Enterprise,2020-12-31,Y
+CUST0068,Prime 068 GmbH,Denmark,Northern Europe,Manufacturing,501-1000,SMB,2021-05-04,N
+CUST0069,Vertex 069 GmbH,Denmark,Northern Europe,Retail,1001-5000,SMB,2021-10-22,Y
+CUST0070,Helio 070 GmbH,Netherlands,Northern Europe,Manufacturing,201-500,SMB,2022-03-20,Y
+CUST0071,Nexa 071 GmbH,Ireland,Western Europe,Healthcare,1001-5000,SMB,2024-04-18,Y
+CUST0072,Vertex 072 GmbH,Sweden,Northern Europe,Retail,51-200,Enterprise,2022-06-09,Y
+CUST0073,Urban 073 GmbH,Ireland,Western Europe,Technology,1001-5000,SMB,2020-06-22,N
+CUST0074,Apex 074 GmbH,Switzerland,DACH,Healthcare,1001-5000,Mid-Market,2021-07-26,Y
+CUST0075,Vertex 075 GmbH,Italy,Southern Europe,Retail,501-1000,Mid-Market,2021-12-25,Y
+CUST0076,Nexa 076 GmbH,Switzerland,DACH,Professional Services,51-200,SMB,2024-12-02,Y
+CUST0077,Helio 077 GmbH,Denmark,Northern Europe,Retail,1001-5000,Mid-Market,2022-01-08,Y
+CUST0078,Vertex 078 GmbH,Switzerland,DACH,Professional Services,5000+,Enterprise,2023-06-10,Y
+CUST0079,Helio 079 GmbH,Austria,DACH,Professional Services,51-200,Mid-Market,2021-09-15,Y
+CUST0080,Helio 080 GmbH,Netherlands,Northern Europe,Healthcare,201-500,SMB,2022-03-22,Y
+CUST0081,Urban 081 GmbH,Austria,DACH,Healthcare,1001-5000,Enterprise,2023-10-08,N
+CUST0082,Prime 082 GmbH,Ireland,Western Europe,Professional Services,51-200,Enterprise,2022-07-27,Y
+CUST0083,Prime 083 GmbH,Spain,Southern Europe,Professional Services,5000+,Mid-Market,2021-11-28,Y
+CUST0084,Prime 084 GmbH,Denmark,Northern Europe,Technology,201-500,Enterprise,2022-06-26,Y
+CUST0085,Nexa 085 GmbH,Germany,DACH,Retail,201-500,Enterprise,2022-09-25,N
+CUST0086,Urban 086 GmbH,Austria,DACH,Healthcare,501-1000,SMB,2021-05-07,Y
+CUST0087,Urban 087 GmbH,Belgium,Western Europe,Technology,201-500,Mid-Market,2023-03-19,Y
+CUST0088,Apex 088 GmbH,Germany,DACH,Retail,51-200,SMB,2023-02-07,Y
+CUST0089,Vertex 089 GmbH,Germany,DACH,Retail,1001-5000,Enterprise,2020-04-28,Y
+CUST0090,Helio 090 GmbH,Austria,DACH,Manufacturing,5000+,Mid-Market,2024-11-09,Y

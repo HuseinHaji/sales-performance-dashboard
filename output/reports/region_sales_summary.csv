@@ -1,0 +1,13 @@
+region,country,total_revenue,gross_margin,order_count,active_customers,revenue_target,top_product_category,gross_margin_pct,target_achievement_rate,region_performance_band
+DACH,Austria,7424310.25,4038525.73,337,9,32171217.47,Software,0.54,0.23,Needs Attention
+DACH,Germany,10377796.63,5597371.65,409,12,32171217.47,Software,0.54,0.32,Needs Attention
+DACH,Switzerland,11018695.08,5952099.13,519,14,32171217.47,Software,0.54,0.34,Needs Attention
+Northern Europe,Denmark,4922411.12,2681138.99,217,6,22518051.16,Software,0.54,0.22,Needs Attention
+Northern Europe,Netherlands,5926365.1,3136852.56,213,7,22518051.16,Software,0.53,0.26,Needs Attention
+Northern Europe,Sweden,9393724.77,5060110.28,295,9,22518051.16,Software,0.54,0.42,Needs Attention
+Southern Europe,Italy,5833554.1,3168107.82,252,8,13904467.71,Software,0.54,0.42,Needs Attention
+Southern Europe,Portugal,4686523.15,2491775.27,197,5,13904467.71,Software,0.53,0.34,Needs Attention
+Southern Europe,Spain,2150788.23,1162857.63,67,2,13904467.71,Software,0.54,0.15,Needs Attention
+Western Europe,Belgium,6266107.3,3408584.43,281,8,17021085.52,Software,0.54,0.37,Needs Attention
+Western Europe,France,462405.21,251185.23,25,1,17021085.52,Software,0.54,0.03,Needs Attention
+Western Europe,Ireland,8265354.59,4435190.51,319,9,17021085.52,Software,0.54,0.49,Needs Attention

@@ -1,0 +1,13 @@
+product_id,product_name,product_category,product_family,unit_cost,list_price,active_flag
+PRD001,Analytics Platform Pro,Software,Performance Management,4600,8200,Y
+PRD002,Sales Planning Suite,Software,Planning,3900,7600,Y
+PRD003,Integration Connector Pack,Software,Data Integration,900,2100,Y
+PRD004,Industrial Sensor Kit,Hardware,Monitoring,620,1450,Y
+PRD005,Edge Control Unit,Hardware,Automation,2100,4300,Y
+PRD006,Field Service Package,Services,Implementation,1200,2600,Y
+PRD007,Managed Support Contract,Services,Support,850,1900,Y
+PRD008,Commercial Intelligence Workshop,Services,Advisory,1800,3600,Y
+PRD009,Energy Optimization Module,Industrial,Efficiency,2800,5900,Y
+PRD010,Production Quality Module,Industrial,Quality,2500,5400,Y
+PRD011,Customer Portal License,Software,Portal,1300,3200,Y
+PRD012,Installation Hardware Bundle,Hardware,Installation,780,1700,Y

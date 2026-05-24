@@ -19,7 +19,16 @@ jobs:
           python -m venv .venv
           source .venv/bin/activate
           pip install --upgrade pip
-          pip install -r requirements.txt || true
+          pip install -r requirements.txt
+      - name: Build dashboard data
+        run: |
+          source .venv/bin/activate
+          python src/generate_synthetic_data.py
+          python src/validate_data.py
+          python src/transform_data.py
+          python src/calculate_kpis.py
+          python src/sales_analysis.py
+          python src/export_powerbi.py
       - name: Start Streamlit app
         run: |
           source .venv/bin/activate

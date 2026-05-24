@@ -1,61 +1,84 @@
+"""Build a flat Power BI-ready dashboard export."""
+
+from __future__ import annotations
+
 import pandas as pd
-from pathlib import Path
 
-BASE_PATH = Path(__file__).resolve().parents[1]
-PROCESSED_PATH = BASE_PATH / 'data' / 'processed'
-POWERBI_PATH = BASE_PATH / 'data' / 'powerbi'
+from config import POWERBI_DIR, PROCESSED_DIR, REPORTS_DIR, ensure_directories
 
 
-def main():
-    POWERBI_PATH.mkdir(parents=True, exist_ok=True)
-    customers = pd.read_csv(PROCESSED_PATH / 'dim_customer.csv')
-    products = pd.read_csv(PROCESSED_PATH / 'dim_product.csv')
-    regions = pd.read_csv(PROCESSED_PATH / 'dim_region.csv')
-    channels = pd.read_csv(PROCESSED_PATH / 'dim_channel.csv')
-    date = pd.read_csv(PROCESSED_PATH / 'dim_date.csv')
-    sales = pd.read_csv(PROCESSED_PATH / 'fact_sales.csv')
-    targets = pd.read_csv(PROCESSED_PATH / 'fact_targets.csv')
+def main() -> None:
+    ensure_directories()
+    sales = pd.read_csv(PROCESSED_DIR / "sales_enriched.csv")
+    targets = pd.read_csv(PROCESSED_DIR / "monthly_targets.csv")
+    customer_summary = pd.read_csv(REPORTS_DIR / "customer_sales_summary.csv")
+    product_summary = pd.read_csv(REPORTS_DIR / "product_sales_summary.csv")
 
-    sales = sales.merge(customers, on='customer_id', how='left')
-    sales = sales.merge(products, on='product_id', how='left')
-    sales = sales.merge(regions, on='region_id', how='left')
-    sales = sales.merge(channels, on='channel_id', how='left')
-    sales = sales.merge(date, on='month_key', how='left')
+    target_keys = ["month", "region", "product_category", "sales_rep_id"]
+    export = sales.merge(
+        targets,
+        left_on=["reporting_month", "region", "product_category", "sales_rep_id"],
+        right_on=target_keys,
+        how="left",
+    )
+    export = export.merge(
+        customer_summary[["customer_id", "customer_value_band", "customer_status", "revenue_rank"]],
+        on="customer_id",
+        how="left",
+    ).merge(
+        product_summary[["product_id", "product_performance_band", "revenue_share"]],
+        on="product_id",
+        how="left",
+    )
 
-    sales_dashboard = sales.copy()
-    sales_dashboard.to_csv(POWERBI_PATH / 'sales_dashboard_dataset.csv', index=False)
+    export["target_achievement_rate"] = (export["net_revenue"] / export["revenue_target"]).where(export["revenue_target"].ne(0), 0).fillna(0)
+    export["clean_order_month"] = export["reporting_month"]
+    export["gross_margin_pct"] = (export["gross_margin"] / export["net_revenue"]).where(export["net_revenue"].ne(0), 0).fillna(0)
 
-    monthly_kpi = sales.groupby(['month_key', 'month_label'], as_index=False).agg(
-        total_revenue=('revenue', 'sum'),
-        total_profit=('profit', 'sum'),
-        avg_margin=('margin', 'mean'),
-        customer_count=('customer_id', 'nunique')
-    ).sort_values('month_key')
-    monthly_kpi.to_csv(POWERBI_PATH / 'monthly_kpi_summary.csv', index=False)
+    columns = [
+        "transaction_id",
+        "clean_order_month",
+        "order_date",
+        "invoice_date",
+        "customer_id",
+        "customer_name",
+        "country",
+        "region",
+        "industry",
+        "customer_segment",
+        "customer_value_band",
+        "customer_status",
+        "product_id",
+        "product_name",
+        "product_category",
+        "product_family",
+        "product_performance_band",
+        "sales_rep_id",
+        "sales_rep_name",
+        "team",
+        "manager",
+        "channel",
+        "dashboard_order_status",
+        "quantity",
+        "unit_price",
+        "discount_rate",
+        "discount_amount",
+        "gross_revenue",
+        "net_revenue",
+        "cost",
+        "gross_margin",
+        "gross_margin_pct",
+        "revenue_target",
+        "margin_target",
+        "volume_target",
+        "target_achievement_rate",
+        "currency",
+    ]
+    dashboard = export[columns].copy()
+    dashboard.columns = [column.replace("_", " ") for column in dashboard.columns]
+    dashboard.to_csv(POWERBI_DIR / "powerbi_sales_dashboard.csv", index=False)
+    print(f"Created Power BI-ready dashboard export in {POWERBI_DIR}")
 
-    product_perf = sales.groupby(['product_category'], as_index=False).agg(
-        revenue=('revenue', 'sum'),
-        profit=('profit', 'sum'),
-        margin=('margin', 'mean')
-    ).sort_values('revenue', ascending=False)
-    product_perf.to_csv(POWERBI_PATH / 'product_performance.csv', index=False)
 
-    region_perf = sales.groupby(['region_name'], as_index=False).agg(
-        revenue=('revenue', 'sum'),
-        profit=('profit', 'sum'),
-        margin=('margin', 'mean')
-    ).sort_values('revenue', ascending=False)
-    region_perf.to_csv(POWERBI_PATH / 'region_performance.csv', index=False)
-
-    customer_perf = sales.groupby(['customer_id', 'customer_name'], as_index=False).agg(
-        revenue=('revenue', 'sum'),
-        profit=('profit', 'sum'),
-        average_order_value=('revenue', lambda x: x.sum() / max(len(x), 1))
-    ).sort_values('revenue', ascending=False)
-    customer_perf.to_csv(POWERBI_PATH / 'customer_performance.csv', index=False)
-
-    print('Power BI sales outputs saved to', POWERBI_PATH)
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -1,0 +1,13 @@
+sales_rep_id,sales_rep_name,team,region,manager,hire_date
+REP001,Anna Weber,Enterprise,DACH,Markus Vogel,2021-04-14
+REP002,Lukas Schneider,Mid-Market,Northern Europe,Markus Vogel,2019-12-02
+REP003,Mara Hoffmann,Mid-Market,Western Europe,Markus Vogel,2019-04-07
+REP004,Jonas Becker,Enterprise,Southern Europe,Sarah Brandt,2019-10-24
+REP005,Sofia Klein,Enterprise,DACH,Nina Hartmann,2023-02-06
+REP006,David Fischer,Enterprise,Northern Europe,Sarah Brandt,2020-01-02
+REP007,Elena Wagner,Mid-Market,Western Europe,Markus Vogel,2023-08-08
+REP008,Noah Meyer,Mid-Market,Southern Europe,Sarah Brandt,2019-10-18
+REP009,Clara Richter,Commercial,DACH,Nina Hartmann,2021-02-13
+REP010,Felix Bauer,Enterprise,Northern Europe,Markus Vogel,2022-07-15
+REP011,Laura Schmitt,Mid-Market,Western Europe,Sarah Brandt,2019-07-23
+REP012,Tim Keller,Enterprise,Southern Europe,Nina Hartmann,2020-09-22
