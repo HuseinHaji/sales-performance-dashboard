@@ -1,3 +1,4 @@
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -6,9 +7,12 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
+TEST_REPORT_TIMESTAMP = "2026-01-01T00:00:00+00:00"
 
 
 def run_pipeline() -> None:
+    env = os.environ.copy()
+    env["REPORT_TIMESTAMP"] = TEST_REPORT_TIMESTAMP
     scripts = [
         "src/generate_synthetic_data.py",
         "src/validate_data.py",
@@ -18,7 +22,14 @@ def run_pipeline() -> None:
         "src/export_powerbi.py",
     ]
     for script in scripts:
-        subprocess.run([sys.executable, script], cwd=ROOT, check=True, capture_output=True, text=True)
+        subprocess.run(
+            [sys.executable, script],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+            env=env,
+        )
 
 
 def test_pipeline_creates_expected_outputs():
