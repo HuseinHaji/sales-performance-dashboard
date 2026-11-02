@@ -1,3 +1,5 @@
+"""Legacy simplified generator retained for reference; not used by the main pipeline."""
+
 import numpy as np
 import pandas as pd
 from pathlib import Path

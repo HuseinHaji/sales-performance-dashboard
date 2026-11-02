@@ -136,6 +136,11 @@ sales-performance-dashboard/
 
 ## How To Run
 
+The canonical pipeline is the sequence below. The older
+`generate_sales_data.py`, `transform_sales_data.py`, and `build_kpis.py`
+files are retained only as simplified reference examples and are not used by
+the dashboard, CI workflow, or documented outputs.
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate

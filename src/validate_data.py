@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import UTC, datetime
 
 import numpy as np
 import pandas as pd
@@ -67,7 +67,16 @@ def load_raw_tables() -> dict[str, pd.DataFrame]:
 def result(check_name: str, table_name: str, records_checked: int, failed_records: int, severity: str = "high") -> CheckResult:
     status = "pass" if failed_records == 0 else "fail"
     failure_rate = round(failed_records / records_checked, 4) if records_checked else 0.0
-    return CheckResult(check_name, table_name, status, int(records_checked), int(failed_records), failure_rate, severity, datetime.utcnow().isoformat())
+    return CheckResult(
+        check_name,
+        table_name,
+        status,
+        int(records_checked),
+        int(failed_records),
+        failure_rate,
+        severity,
+        datetime.now(UTC).isoformat(),
+    )
 
 
 def validate_tables(tables: dict[str, pd.DataFrame]) -> pd.DataFrame:

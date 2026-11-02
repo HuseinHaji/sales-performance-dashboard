@@ -1,3 +1,5 @@
+"""Legacy simplified transform retained for reference; not used by the main pipeline."""
+
 import pandas as pd
 from pathlib import Path
 

@@ -162,3 +162,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+"""Legacy simplified KPI builder retained for reference; not used by the main pipeline."""
