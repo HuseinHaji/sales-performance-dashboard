@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 import os
 
 import numpy as np
@@ -68,7 +68,7 @@ def load_raw_tables() -> dict[str, pd.DataFrame]:
 def result(check_name: str, table_name: str, records_checked: int, failed_records: int, severity: str = "high") -> CheckResult:
     status = "pass" if failed_records == 0 else "fail"
     failure_rate = round(failed_records / records_checked, 4) if records_checked else 0.0
-    check_timestamp = os.getenv("REPORT_TIMESTAMP") or datetime.now(UTC).isoformat()
+    check_timestamp = os.getenv("REPORT_TIMESTAMP") or datetime.now(timezone.utc).isoformat()
     return CheckResult(
         check_name,
         table_name,
